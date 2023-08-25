@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comments, SongPosts, User } = require('../../models');
+const { Comments, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -9,9 +9,9 @@ router.get('/', withAuth, async (req, res) => {
         {
           model: User,
         },
-        {
-          model: SongPosts,
-        },
+        // {
+        //   model: SongPosts,
+        // },
       ],
     });
 
@@ -24,10 +24,9 @@ router.get('/', withAuth, async (req, res) => {
 // create
 router.post('/', withAuth, async (req, res) => {
   try {
-    const { post, songposts_id } = req.body;
+    const { post } = req.body;
     const commentsData = await Comments.create({
       post,
-      songposts_id,
       user_id: req.session.user_id,
     });
     res.status(200).json(commentsData);
@@ -44,24 +43,6 @@ router.post('/', withAuth, async (req, res) => {
     */
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
-  // delete a category by its `id` value
-  try {
-    const commentsData = await Comments.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
 
-    if (!commentsData) {
-      res.status(404).json({ message: 'No data found' });
-      return;
-    }
-
-    res.status(200).json(commentsData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 module.exports = router;

@@ -29,31 +29,4 @@ router.get('/new-post', withAuth, async (req, res) => {
   }
 });
 
-
-router.get('/songposts', withAuth, async (req, res) => {
-  try {
-    const songPostsData = await SongPost.findAll({
-      include: [
-        {
-          model: Comments,
-        },
-        {
-          model: User,
-        },
-      ],
-    });
-    const songPosts = songPostsData.map((songPost) =>
-      songPost.get({ plain: true })
-    );
-    // console.log(songPosts);
-    res.render('songposts', {
-      songPosts,
-      logged_in: req.session.logged_in,
-      user_id: req.session.user_id,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 module.exports = router;

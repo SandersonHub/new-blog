@@ -11,17 +11,12 @@ Comments.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    
     post: {
       type: DataTypes.STRING(140),
       allowNull: false,
     },
-    songposts_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'songposts',
-        key: 'id',
-      },
-    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {

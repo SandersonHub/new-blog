@@ -32,7 +32,7 @@ const loginFormHandler = async (event) => {
     console.log(response);
     if (response.ok) {
       console.log(response);
-      document.location.replace("/songposts");
+      document.location.replace("/newpost");
     } else {
       alert("Failed to log in.");
     }
@@ -54,7 +54,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/songposts");
+      document.location.replace("/newpost");
     } else {
       alert("Failed to sign up.");
     }
