@@ -1,0 +1,272 @@
+body {
+  font-family: Nunito, sans-serif;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  background-color: #3a5a40;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: auto;
+  height: 150px;
+}
+.hero-body {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  color: #dad7cd;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+  margin-left: 650px;
+}
+.login-button {
+  margin-top: 10px;
+  margin-right: 100px;
+  background-color: #dad7cd;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  box-shadow: -6px 8px 4px #2a4b30;
+  transition: 0.3s all ease-in-out;
+}
+.new-post {
+  margin-top: 10px;
+  background-color: #dad7cd;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  box-shadow: -6px 8px 4px #2a4b30;
+  transition: 0.3s all ease-in-out;
+}
+.form-box {
+  background-color: #3a5a40;
+  border-radius: 25px;
+  margin-top: 50px;
+  margin-left: 750px;
+  width: 500px;
+  height: 600px;
+}
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 5px #588157;
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+.btn {
+  top: 0;
+  left: 0px;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #a3b18a, #dad7cd);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.input-group {
+  top: 180px;
+  width: 280px;
+  margin-left: 65px;
+  transition: 0.5s;
+}
+.input-field {
+  color: #dad7cd;
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.input-field::placeholder {
+  color: #dad7cd;
+  opacity: 1;
+}
+
+#input-password-login {
+  margin-top: 20px;
+}
+#input-password-signup {
+  margin-top: 20px;
+}
+.checkbox {
+  color: #dad7cd;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-right: 2px;
+}
+span {
+  color: #dad7cd;
+}
+#register {
+  display: none;
+}
+#login {
+  display: block;
+}
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  margin-top: 25px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #a3b18a, #dad7cd);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  box-shadow: -6px 8px 4px #2a4b30;
+  transition: 0.5s all ease-in-out;
+}
+.toggle-btn:hover {
+  transform: scale(1.08);
+}
+.submit-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to left, #a3b18a, #dad7cd);
+}
+/* newPost styling*/
+.new-post-box {
+  background-color: #588157;
+  border-radius: 25px;
+  margin-top: 50px;
+  margin-left: 470px;
+  width: 1000px;
+  height: 600px;
+}
+.post-container {
+  display: block;
+  justify-content: center;
+  padding-top: 12%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.song-info-box {
+  display: flex;
+  align-items: center;
+  padding-left: 25%;
+}
+.spotify-link-text {
+  color: #dad7cd;
+  text-align: center;
+  font-size: 24px;
+}
+.spotify-link-box {
+  width: 500px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 15px;
+  text-decoration-color: #588157;
+  background-color: #dad7cd;
+  box-shadow: -3px 6px 4px #3a5a40;
+}
+.comment-info-box {
+  padding-top: 100px;
+}
+.comment-box {
+  box-shadow: -6px 8px 8px #3a5a40;
+  border-radius: 20px;
+  text-decoration-color: #588157;
+  background-color: #dad7cd;
+}
+.post-button {
+  background: #588157;
+  color: #dad7cd;
+  margin-top: 20px;
+  margin-left: 750px;
+  width: 150px;
+  height: 35px;
+  border: 1px solid #dad7cd;
+  border-radius: 15px;
+  box-shadow: 3px 4px 4px #3a5a40;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.exit-button {
+  position: absolute;
+  top: 263px;
+  left: 520px;
+  color: #dad7cd;
+  background: transparent;
+  outline: none;
+  box-shadow: 3px 4px 4px #3a5a40;
+}
+.button:hover {
+  transform: scale(1.05);
+  color: #3a5a40;
+  background: #dad7cd;
+  box-shadow: 3px 4px 4px #3a5a40;
+}
+.button:focus {
+  transform: scale(1.05);
+  color: #3a5a40;
+  background: #dad7cd;
+  box-shadow: 3px 4px 4px #3a5a40;
+}
+/* songposts page styling*/
+.card {
+  margin-top: 10px;
+}
+.media {
+  width: 800px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.media-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* #reply {
+  color: #3a5a40;
+  background: #fff;
+
+  width: 100px;
+  height: 25px;
+  border: 1px solid #dad7cd;
+  border-radius: 15px;
+  box-shadow: 3px 4px 4px #b5d3bb;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+#reply:hover {
+  transform: scale(1.05);
+  background: #588157;
+  color: #dad7cd;
+  box-shadow: 3px 4px 4px #b5d3bb;
+} */
+.card-box {
+  display: flex;
+  height: 230px;
+  margin-top: 20px;
+  border: 10px solid #588157;
+}
+.image {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 15px;
+}
+.image img {
+  border-radius: 15px;
+}
